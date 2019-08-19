@@ -9,7 +9,7 @@ def game_hash
           :number => 0,
           :shoe => 16,
           :points => 22,
-          :rebouns => 12,
+          :rebounds => 12,
           :assists => 12,
           :steals => 3,
           :blocks => 1,
@@ -17,7 +17,14 @@ def game_hash
           
         },
         "Reggie Evans" => {
-          
+          :number => 30,
+          :shoe => 14,
+          :points => 12,
+          :rebounds => 12,
+          :assists => 12,
+          :steals => 12,
+          :blocks => 12,
+          :slam_dunks => 7
         },
           
         }
@@ -26,6 +33,8 @@ def game_hash
     :away => {}
     
   }
+  
+  game
 end
 
 
