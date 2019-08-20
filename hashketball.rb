@@ -154,6 +154,7 @@ def shoe_size(player)
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     if g_value[:players].include?(player)
       shoe = g_value[:players][player][:shoe]
+    end
   end
   
   shoe
