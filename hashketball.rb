@@ -184,7 +184,17 @@ end
 
 
 def player_numbers(team)
+  numbers = []
   
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    if g_value[:team_name] == team
+      g_value[:players].each do |player|
+        numbers.push[player[:number]]
+      end
+    end
+  end
+  
+  numbers
 end
 
 
