@@ -197,6 +197,18 @@ def player_numbers(team)
   numbers
 end
 
+def player_stats(player)
+  stats = {}
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    if g_value[:players].include?(player)
+      stats = g_value[:players][player]
+    end
+  end
+  
+  stats
+end
+
 
 
 
