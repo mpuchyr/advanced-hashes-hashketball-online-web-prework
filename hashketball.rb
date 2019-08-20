@@ -242,7 +242,8 @@ def most_points_scored
 end
 
 def winning_team
-
+  home_team = [game_hash[:home][:team]]
+  away_team = [game_hash[:away][:team]]
 end
 
 def player_with_longest_name
