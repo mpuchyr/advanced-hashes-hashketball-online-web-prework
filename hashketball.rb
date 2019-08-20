@@ -148,6 +148,17 @@ def num_points_scored(player)
 
 end
 
+def shoe_size(player)
+  shoe = nil
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    if g_value[:players].include?(player)
+      shoe = g_value[:players][player][:shoe]
+  end
+  
+  shoe
+end
+
 
 
 
