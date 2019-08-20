@@ -160,6 +160,17 @@ def shoe_size(player)
   shoe
 end
 
+def team_colors(team)
+  colors = nil
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    if g_value[:team_name] == team
+      colors = g_value[:colors]
+  end
+  
+  colors
+end
+
 
 
 
