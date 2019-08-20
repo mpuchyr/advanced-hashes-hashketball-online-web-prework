@@ -263,6 +263,29 @@ def player_with_longest_name
   player_name
 end
 
+def long_name_steals_a_ton
+  most_steals = 0
+  longest_name_steals_most = false
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
+      if player_value[:steals] > most_steals
+        most_steals = player_value[:steals]
+      end
+    end
+  end
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    if g_value[:players].include?(player_with_longest_name)
+      if g_value[:players][player_with_longest_name][:steals] > most_steals
+        longest_name_steals_most = true
+      end
+    end
+  end
+
+  longest_name_steals_most
+end
+
 
 
 
