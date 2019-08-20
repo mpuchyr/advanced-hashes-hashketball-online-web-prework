@@ -136,6 +136,15 @@ end
 
 good_practices
 
+def num_points_scored(player)
+  points = nil
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    
+  end
+  
+  points
+end
 
 
 
