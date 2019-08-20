@@ -242,6 +242,21 @@ def most_points_scored
 end
 
 def winning_team
+  team1 = []
+  team2 = []
+  
+  team1.push(game_hash[:home][:team_name])
+  team2.push(game_hash[:away][:team_name])
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    
+  end
+  
+  if team1[1] > team2[1]
+    return team1[0]
+  else
+    return team2[0]
+  end
   
 end
 
