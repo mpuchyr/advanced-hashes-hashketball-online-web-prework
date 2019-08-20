@@ -172,6 +172,16 @@ def team_colors(team)
   colors
 end
 
+def team_names
+  teams = []
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    
+  end
+  
+  teams
+end
+
 
 
 
