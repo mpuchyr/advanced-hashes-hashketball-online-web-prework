@@ -211,10 +211,15 @@ end
 
 def big_shoe_rebounds
   rebounds = nil
-  shoe = nil
+  shoe = 0
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    
+    g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
+      if player_value[:shoe] > shoe
+        shoe = player_value[:shoe]
+        rebounds = player_value[:rebounds]
+      end
+    end
   end
   
   
