@@ -256,7 +256,7 @@ def winning_team
         team1_total += player_value[:score]
       end
     else
-      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)
+      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
         team2_total += player_value[:score]
       end
     end
