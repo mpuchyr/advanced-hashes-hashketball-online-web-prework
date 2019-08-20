@@ -244,12 +244,16 @@ end
 def winning_team
   team1 = []
   team2 = []
+  team1_total = 0
+  team2_total = 0
   
   team1.push(game_hash[:home][:team_name])
   team2.push(game_hash[:away][:team_name])
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    
+    if g_key == :home
+      
+    end
   end
   
   if team1[1] > team2[1]
