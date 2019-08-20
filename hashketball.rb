@@ -242,35 +242,20 @@ def most_points_scored
 end
 
 def winning_team
-  team1 = []
-  team2 = []
-  team1_total = 0
-  team2_total = 0
-  
-  team1.push(game_hash[:home][:team_name])
-  team2.push(game_hash[:away][:team_name])
+
+end
+
+def player_with_longest_name
+  name_length = 0
+  player_name = nil
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    if g_key == :home
-      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
-        team1_total += player_value[:score]
-      end
-    else
-      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
-        team2_total += player_value[:score]
-      end
+    g_value[:players].reduce ({}) do |player_memo, (player_key, player_value)|
+      gam
     end
   end
   
-  team1.push(team1_total)
-  team2.push(team2_total)
-  
-  if team1[1] > team2[1]
-    return team1[0]
-  else
-    return team2[0]
-  end
-  
+  player_name
 end
 
 
