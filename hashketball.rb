@@ -140,7 +140,9 @@ def num_points_scored(player)
   points = nil
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    
+    if g_value[:players].include?(player)
+      points = g_value[:players][player][:points]
+    end
   end
   
   points
