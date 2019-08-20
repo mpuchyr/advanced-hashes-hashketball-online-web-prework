@@ -134,6 +134,7 @@ def good_practices
   end
 end
 
+good_practices
 
 def num_points_scored(player)
   points = nil
