@@ -134,17 +134,8 @@ def good_practices
   end
 end
 
-def num_points_scored(player)
-  points = nil
-  
-  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    if g_key[:players].include?(player)
-      points = g_key[:players][player][:points]
-    end
-  end
-    
-  points
-end
+good_practices
+
 
 
 
