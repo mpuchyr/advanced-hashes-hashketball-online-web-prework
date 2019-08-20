@@ -27,7 +27,14 @@ def game_hash
           :slam_dunks => 7
         },
         "Brook Lopez" => {
-          
+          :number => ,
+          :shoe => ,
+          :points => ,
+          :rebounds => ,
+          :assists => ,
+          :steals => ,
+          :blocks => ,
+          :slam_dunks => 
         },
         "Mason Plumlee" => {},
         "Jason Terry" => {}
