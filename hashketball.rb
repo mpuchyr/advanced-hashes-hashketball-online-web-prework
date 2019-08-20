@@ -222,11 +222,23 @@ def big_shoe_rebounds
     end
   end
   
-  
-  
-  
-  
   rebounds
+end
+
+def most_points_scored
+  player = nil
+  points = 0
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    g_value[:players].reduce ({}) do |player_memo, (player_key, player_value)|
+      if player_value[:points] > points
+        points = player_value[:points]
+        player = player_key
+      end
+    end
+  end
+  
+  player
 end
 
 
