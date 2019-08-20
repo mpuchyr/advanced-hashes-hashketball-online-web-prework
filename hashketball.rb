@@ -247,11 +247,15 @@ end
 
 def player_with_longest_name
   name_length = 0
+  name_placeholder = ""
   player_name = nil
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     g_value[:players].reduce ({}) do |player_memo, (player_key, player_value)|
-      gam
+      name_placeholder = player_key
+      if name_placeholder.length > name_length
+        name_length = name_placeholder.length
+        
     end
   end
   
