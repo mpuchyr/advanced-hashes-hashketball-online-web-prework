@@ -250,11 +250,11 @@ def winning_team
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     if g_key == :home
       g_value[:players].reduce({}) do |home_memo, (home_key, home_value)|
-        home_total += home_value[:score]
+        home_total += home_value[:points]
       end
     else
       g_value[:players].reduce({}) do |away_memo, (away_key, away_value)|
-        away_total += away_value[:score]
+        away_total += away_value[:points]
       end
     end
   end
