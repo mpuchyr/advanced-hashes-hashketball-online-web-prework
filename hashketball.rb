@@ -176,7 +176,7 @@ def team_names
   teams = []
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
-    teams.push(g_key[:team_name])
+    teams.push[g_value[:team_name]]
   end
   
   teams
