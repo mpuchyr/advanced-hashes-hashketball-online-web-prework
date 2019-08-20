@@ -209,6 +209,21 @@ def player_stats(player)
   stats
 end
 
+def big_shoe_rebounds
+  rebounds = nil
+  shoe = nil
+  
+  game_hash.reduce({}) do |g_memo, (g_key, g_value)|
+    
+  end
+  
+  
+  
+  
+  
+  rebounds
+end
+
 
 
 
