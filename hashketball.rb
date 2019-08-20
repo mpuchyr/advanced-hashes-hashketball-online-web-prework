@@ -255,7 +255,8 @@ def player_with_longest_name
       name_placeholder = player_key
       if name_placeholder.length > name_length
         name_length = name_placeholder.length
-        
+        player_name = name_placeholder
+      end
     end
   end
   
