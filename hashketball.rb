@@ -166,6 +166,7 @@ def team_colors(team)
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     if g_value[:team_name] == team
       colors = g_value[:colors]
+    end
   end
   
   colors
