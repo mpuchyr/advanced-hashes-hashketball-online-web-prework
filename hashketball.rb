@@ -252,9 +252,18 @@ def winning_team
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     if g_key == :home
-      
+      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
+        team1_total += player_value[:score]
+      end
+    else
+      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)
+        team2_total += player_value[:score]
+      end
     end
   end
+  
+  team1.push(team1_total)
+  team2.push(team2_total)
   
   if team1[1] > team2[1]
     return team1[0]
