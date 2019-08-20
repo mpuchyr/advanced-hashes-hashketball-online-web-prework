@@ -188,7 +188,7 @@ def player_numbers(team)
   
   game_hash.reduce({}) do |g_memo, (g_key, g_value)|
     if g_value[:team_name] == team
-      g_value[:players].each do |player_memo, (player_key, player_value)|
+      g_value[:players].reduce({}) do |player_memo, (player_key, player_value)|
         numbers.push(player_value[:number])
       end
     end
